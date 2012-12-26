@@ -1,0 +1,12 @@
+{
+  "name": "rapgenius",
+  "description": "An unofficial node.js client module for RapGenius",
+  "keywords": [
+    "lyrics",
+    "rap",
+    "genius",
+    "rapgenius"
+  ],
+  "author": "Justin Hurley",
+  "main": "index"
+}
