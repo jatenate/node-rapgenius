@@ -11,11 +11,11 @@ An unofficial node.js module for searching RapGenius. Once a proper rapgenius AP
     var rapgenius = require('rapgenius');
     rapgenius.search('Kreayshawn', function(results) {
       var r = results[0];
-      console.log(r.rapgenius_title);
-      console.log(r.artist_name);
-      console.log(r.song_title);
-      console.log(r.rapgenius_uri);
-      console.log(r.rapgenius_id);
+      console.log(r.rapgenius_title); // 'Kreayshawn – Gucci Gucci'
+      console.log(r.artist_name);     // 'Kreayshawn'
+      console.log(r.song_title);      // 'Gucci Gucci'
+      console.log(r.rapgenius_uri);   // '/Kreayshawn-gucci-gucci-lyrics'
+      console.log(r.rapgenius_id);    // 50156
     });
 
 ## Testing
