@@ -1,5 +1,6 @@
 {
   "name": "rapgenius",
+  "version": "0.0.1",
   "description": "An unofficial node.js client module for RapGenius",
   "keywords": [
     "lyrics",
@@ -8,5 +9,8 @@
     "rapgenius"
   ],
   "author": "Justin Hurley",
-  "main": "index"
+  "main": "index",
+  "dependencies": {
+    "cheerio": "0.10.5"
+  }
 }

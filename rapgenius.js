@@ -3,6 +3,14 @@ var querystring = require('querystring')
   , HOST = 'rapgenius.com'
   , SEARCH_PATH = '/search/quick?';
 
+/**
+ * Searches rapgenius for query. Returns an array where each element has:
+ *  - rapgenius_title
+ *  - artist_name
+ *  - song_title
+ *  - rapgenius_uri
+ *  - rapgenius_id (rapgenius.com/songs/{rapgenius_id} redirects to rapgenius.com{rapgenius_uri})
+ */
 exports.search = function(query, cb) {
   var options = {
     'host': HOST,
@@ -18,8 +26,6 @@ exports.search = function(query, cb) {
     })
 
     response.on('end', function() {
-      console.log('STR: ' + str);
-
       cb(parse_search_response(str));
     })
   }
@@ -27,7 +33,9 @@ exports.search = function(query, cb) {
   http.request(options, callback).end();
 }
 
-// Exposed for testing
+/**
+ * Exposed for testing.
+ */
 var parse_search_response = exports.parse_search_response = function(response) {
   var lines = response.split("\n");
 
@@ -63,31 +71,3 @@ var parse_search_response = exports.parse_search_response = function(response) {
 
   return results;
 }
-
-exports.get_lyrics = function(rapgenius_uri, cb) {
-  var options = {
-    'host': HOST,
-    'path': rapgenius_uri
-  }
-
-  var callback = function(response) {
-    var str = '';
-
-    response.on('data', function(chunk) {
-      str += chunk;
-    })
-
-    response.on('end', function() {
-      console.log('STR: ' + str);
-
-      cb(parse_lyrics_response(str));
-    })
-  }
-
-  http.request(options, callback).end();
-}
-
-var parse_lyrics_response = exports.parse_lyrics_response = function(response) {
-
-}
-
