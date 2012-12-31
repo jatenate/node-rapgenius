@@ -3,7 +3,6 @@ var rapgenius = require('../rapgenius');
 exports.test_parse_response = function(test) {
   // parse no results -------------------------------------
   var results = rapgenius.parse_search_response('');
-  console.log("RESULTS: " + results)
   test.equal(results.length, 0);
 
 	// parse single result ----------------------------------
@@ -58,8 +57,6 @@ exports.test_parse_response = function(test) {
 
 exports.test_search = function(test) {
   var cb = function(results) {
-    console.log(results);
-
     test.equal(results.length, 10);
 
     test.done();
