@@ -1,16 +1,21 @@
 {
   "name": "rapgenius",
   "version": "0.0.1",
-  "description": "An unofficial node.js client module for RapGenius",
+  "description": "An unofficial node.js module for searching RapGenius",
   "keywords": [
-    "lyrics",
     "rap",
     "genius",
-    "rapgenius"
+    "rapgenius",
+    "search"
   ],
   "author": "Justin Hurley",
   "main": "index",
   "dependencies": {
     "cheerio": "0.10.5"
+  },
+  "homepage": "http://github.com/jatenate/node-rapgenius",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/jatenate/node-rapgenius.git"
   }
 }
