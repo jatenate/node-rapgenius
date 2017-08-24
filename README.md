@@ -1,3 +1,4 @@
+[![Stories in Ready](https://badge.waffle.io/jatenate/node-rapgenius.png?label=ready&title=Ready)](https://waffle.io/jatenate/node-rapgenius?utm_source=badge)
 # rapgenius
 
 An unofficial node.js module for searching RapGenius. Once a proper rapgenius API exists that will be added.
